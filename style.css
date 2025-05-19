@@ -14,18 +14,15 @@ body {
   justify-content: space-around;
   align-items: center;
   top: 0;
-  /* margin-left: 60px; */
   cursor: pointer;
-  /* margin-bottom: 50px; */
   position: sticky;
   background-color: white;
   z-index: 1
 }
 
 .navbar__s1 {
-  /* justify-content: space-around; */
   margin-top: 10px;
-  margin-left: 90px;
+  margin-left: 50px;
   justify-content: center;
 }
 
@@ -49,8 +46,6 @@ body {
   justify-content: center;
   gap: 10px;
   align-items: center;
-
-  /* justify-content: space-around; */
 }
 
 
@@ -63,6 +58,11 @@ body {
   font-weight: bold;
 }
 
+.navbar__s4,
+.navbar__s5 {
+  display: none;
+}
+
 .heading {
   font-weight: bold;
   font-size: 20px;
@@ -71,31 +71,25 @@ body {
   justify-content: center;
 }
 
-.nav-links {
+
+
+
+.nav-links ul {
   display: flex;
+  justify-content: center;
+  align-items: center;
   list-style: none;
   gap: 25px;
-  padding: 10px;
+  padding: 20px;
   margin-top: 48px;
   margin-left: 150px;
   margin-right: 150px;
-  justify-content: center;
-  align-items: center;
-
+  cursor: pointer;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-}
 
-.nav-links li:hover i,
-.nav-links li:hover a {
-  color: grey;
-  /* Darker color on hover */
-
-
+.nav-links li {
+  border-bottom: 2px solid transparent;
 }
 
 .nav-links i {
@@ -103,11 +97,12 @@ body {
 }
 
 .nav-links li:hover {
-
-  border-bottom: 2px solid grey;
+  border-bottom-color: grey;
+  color: grey;
 }
 
 .search_bar {
+  margin-top: 50px;
   padding: 10px;
   border: 1px solid #bababa;
   border-radius: 30px;
@@ -117,7 +112,8 @@ body {
   gap: 15px;
   background-color: #fff;
   margin: 0 auto;
-  box-shadow: #e0e0e0;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  outline: none;
 
 }
 
@@ -227,11 +223,9 @@ body {
   font-size: 12px;
   margin: 0;
   padding: 0.5px;
-  /* line-height: 1; */
-  /* display: inline-block; */
 }
 
-.popular{
+.popular {
   background-color: rgb(244, 244, 237);
 }
 
@@ -249,12 +243,9 @@ body {
 
 }
 
-.card__container1{
+.card__container1 {
   display: flex;
-  /* grid-template-columns: repeat(3, 1fr); */
   gap: 20px;
-  /* small gap */
-  /* justify-content: space-between; */
   align-items: center;
   margin-left: 180px;
   margin-right: 80px;
@@ -262,22 +253,22 @@ body {
 }
 
 
-.card_most_popular{
+.card_most_popular {
   padding: 0;
   margin: 0;
 }
 
-.card_most_popular img{
+.card_most_popular img {
   width: 100%;
-   max-width: 360px;
+  max-width: 360px;
   height: 250px;
   border-radius: 10px;
 
-} 
+}
 
-.card_most_popular h4{
-    margin: 4px 0 2px;
-    text-align: center;
+.card_most_popular h4 {
+  margin: 4px 0 2px;
+  text-align: center;
 }
 
 
@@ -287,25 +278,26 @@ body {
 }
 
 .card-container_advertise {
-  width: 85%;
+  width: 80%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   background-color: #F2ECF9;
-  margin-left: 50px;
+  margin-left: 140px;
 }
+
 .card-wrap__img img {
   margin: 20px;
- width: 500px;
+  width: 500px;
   height: 300px;
- border-radius: 10px;
- height: 40%;
+  border-radius: 10px;
+  height: 40%;
 }
 
-.card-sponsored{
+.card-sponsored {
 
   text-align: center;
-  
+
 }
 
 .card-desc {
@@ -333,18 +325,13 @@ body {
   padding: 5px;
   background-color: rgb(240, 238, 238);
   color: black;
-
-
 }
 
 .footer p {
-
   font-size: 14px;
   margin: 10px;
 
-
 }
-
 
 .footer__one {
   display: flex;
@@ -375,17 +362,52 @@ body {
 }
 
 .footer__two a {
-  /* text-decoration: none; */
   color: black;
   font-weight: bold;
 }
 
 .footer__two a:hover {
   color: grey;
-  /* Darker color on hover */
 
 }
 
 .footer__two i {
   padding: 5px;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 10px;
+  }
+
+}
+
+
+@media screen and (max-width: 600px) {
+  .search_bar {
+    width: 60%;
+    height: 30%;
+  }
+
+  .card__container,
+  .card__container1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+  }
+
+  .card__container1 {
+    flex-basis: 200px;
+    flex-grow: 1;
+  }
+
+  .navbar__s2,
+  .navbar__s3 {
+    display: none;
+  }
+
+  .navbar__s4,
+  .navbar__s5 {
+    display: block;
+  }
+
 }
